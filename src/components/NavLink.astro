@@ -1,0 +1,23 @@
+---
+export interface Props {
+	name: string;
+	href: string;
+}
+
+const { href, name } = Astro.props;
+---
+
+<li><a href={href}>{name}</a></li>
+
+<style>
+	a {
+		color: var(--GrayishBlue);
+		padding: 15px 0;
+		text-decoration: none;
+	}
+
+	a:hover{
+		cursor: pointer;
+		border-bottom: 2px solid var(--LimeGreen);
+	}
+</style>

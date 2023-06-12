@@ -10,9 +10,12 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
+		<meta name="description" content="Next generation digital banking">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -22,15 +25,19 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--navColor: gray;
+		--DarkBlue: hsl(233, 26%, 24%);
+		--LimeGreen: hsl(136, 65%, 51%);
+		--BrightCyan: hsl(192, 70%, 51%);
+		--gradient: linear-gradient(var(--LimeGreen),var(--BrightCyan));
+		--GrayishBlue: hsl(233, 8%, 62%);
+		--LightGrayishBlue: hsl(220, 16%, 96%);
+		--VeryLightGray: hsl(0, 0%, 98%);
+		--White: hsl(0, 0%, 100%);
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+
+	body{
+		font-size: 18px;
+		font-family: 'Public Sans', sans-serif;
 	}
 </style>

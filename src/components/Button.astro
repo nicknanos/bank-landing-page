@@ -1,0 +1,29 @@
+---
+export interface Props {
+    name:string;
+}
+
+const {name} = Astro.props;
+---
+
+<button>{name}</button>
+
+<style>
+    button {
+        font-size: 17px;
+        padding: 0.7em 1.5em;
+        color: var(--White);
+        background: var(--gradient);
+        border: none;
+        border-radius: 40px;
+    }
+
+    button:hover {
+        cursor: pointer;
+        filter: brightness(1.1);
+    }
+
+    button:active {
+        filter: brightness(0.95);
+    }
+</style>

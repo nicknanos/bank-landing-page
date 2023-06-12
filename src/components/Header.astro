@@ -1,0 +1,39 @@
+---
+import NavLink from "./NavLink.astro";
+import Button from "./Button.astro";
+
+---
+
+<header>
+	<img src="/images/logo.svg" alt="logo">
+	<nav>
+		<ul>
+			<NavLink name="Home" href="#" />
+			<NavLink name="About" href="#" />
+			<NavLink name="Contact" href="#" />
+			<NavLink name="Blog" href="#" />
+			<NavLink name="Careers" href="#" />
+		</ul>
+	</nav>
+	<Button name="Request Invite"/>
+</header>
+
+<style>
+	header{
+		position: sticky;
+		background: var(--White);
+		margin: 0 200px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	ul{
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 25px;
+	}
+
+</style>
