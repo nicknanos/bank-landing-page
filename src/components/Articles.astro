@@ -44,8 +44,11 @@ const articles = await Astro.glob('../content/articles/*.md')
 
     article {
         flex: 1;
+        display: flex;
+        flex-flow: column nowrap;
         border-radius: 10px;
         background-color: var(--White);
+        text-overflow: ellipsis; 
     }
 
     i {
