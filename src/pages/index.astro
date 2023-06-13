@@ -1,15 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout title="Easy Bank">
-	<Header></Header>
+	<Header />
 	<main>
-
+		<Hero />
 	</main>
 </Layout>
 
 <style>
-
+	main {
+        background-color: var(--VeryLightGray);
+	}
 </style>

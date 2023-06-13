@@ -2,17 +2,21 @@
 import NavLink from "./NavLink.astro";
 import Button from "./Button.astro";
 
+const links = [
+			{name:"Home", url:"#"},
+			{name:"About", url:"#"},
+			{name:"Contact", url:"#"},
+			{name:"Blog", url:"#"},
+			{name:"Careers", url:"#"},
+		]
+
 ---
 
 <header>
 	<img src="/images/logo.svg" alt="logo">
 	<nav>
 		<ul>
-			<NavLink name="Home" href="#" />
-			<NavLink name="About" href="#" />
-			<NavLink name="Contact" href="#" />
-			<NavLink name="Blog" href="#" />
-			<NavLink name="Careers" href="#" />
+			{links.map((link)=> <NavLink name={link.name} href={link.url}/>)}
 		</ul>
 	</nav>
 	<Button name="Request Invite"/>
@@ -20,9 +24,12 @@ import Button from "./Button.astro";
 
 <style>
 	header{
-		position: sticky;
+		position: absolute;
+		z-index: 100;
+		left: 0;
+		right: 0;
 		background: var(--White);
-		margin: 0 200px;
+		padding: 17px 200px 5px 200px ;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;

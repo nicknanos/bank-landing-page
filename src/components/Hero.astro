@@ -1,0 +1,53 @@
+---
+import Button from "./Button.astro";
+---
+
+<section>
+    <div class="left">
+        <h2>Next generation  digital banking</h2>
+        <p> Take your financial life online. Your Easybank account will be a one-stop-shop 
+            for spending, saving, budgeting, investing, and much more.
+        </p>
+        <Button name = "Request Invite" /> 
+    </div>
+    <img src="images/image-mockups.png" alt="Mock up">
+</section>
+
+<style>
+    section {
+        background: url('images/bg-intro-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: 150% 200%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 300px;
+        margin-left: 200px;
+        overflow-x: hidden;
+    }
+
+    h2 {
+        font-size: 60px;
+        font-weight: 300;
+        color:var(--DarkBlue);
+    }
+
+    p {
+        font-size: 20px;
+        color: var(--GrayishBlue);
+        line-height: 30px;
+    }
+
+    img {
+        position: relative;
+        z-index: 1;
+        left: 130px;
+    }
+
+    .left > * {
+        width: 90%;
+        margin-bottom: 20px;
+        
+    }
+
+</style>
