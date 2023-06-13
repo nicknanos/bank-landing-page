@@ -2,12 +2,20 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
 ---
 
 <Layout title="Easy Bank">
 	<Header />
 	<main>
 		<Hero />
+		<div class="features">
+			<h2>Why Choose Easybank?</h2>
+			<p>  We leverage Open Banking to turn your bank account into your 
+				financial hub. <br> Control your finances like never before.
+			</p>
+			<Features/>
+		</div>
 	</main>
 </Layout>
 
@@ -15,4 +23,25 @@ import Hero from '../components/Hero.astro';
 	main {
         background-color: var(--VeryLightGray);
 	}
+
+	.features {
+		background-color: var(--LightGrayishBlue);
+		position: relative;
+		z-index: 40;
+		bottom: 100px;
+		padding: 50px 200px;
+	}
+
+	.features > h2 {
+		font-size: 45px;
+		font-weight: 300;
+		color: var(--DarkBlue);
+	}
+
+	.features > p {
+		font-size: 25px;
+		line-height: 30px;
+        color: var(--GrayishBlue);
+	}
+
 </style>

@@ -1,0 +1,29 @@
+---
+import FeatureItem from "./FeatureItem.astro";
+
+const features = [
+                    {img:'images/icon-online.svg',title:'Online Banking',
+                    desc:' Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.'},
+
+                    {img:'images/icon-budgeting.svg',title:'Simple Budgeting',
+                    desc:'  See exactly where your money goes each month. Receive notifications when you’re close to hitting your limits.'},
+
+                    {img:'images/icon-onboarding.svg',title:'Fast Onboarding',
+                    desc:'We don’t do branches. Open your account in minutes online and start taking control of your finances right away.'},
+
+                    {img:'images/icon-api.svg',title:'Open API',
+                    desc:' Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.'}
+] 
+---
+
+<section>
+    {features.map((feature)=> <FeatureItem image={feature.img} title={feature.title} desc={feature.desc}/>)}
+</section>
+
+<style>
+    section {
+        display: flex;
+        gap: 20px;
+        margin: 100px 0;
+    }
+</style>

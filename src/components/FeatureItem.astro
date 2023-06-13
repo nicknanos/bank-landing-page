@@ -1,0 +1,25 @@
+---
+const {image, title, desc} = Astro.props;
+---
+
+<div>
+    <img src={image} alt="Icon">
+    <h4>{title}</h4>
+    <p>{desc}</p>
+</div>
+
+<style>
+    h4 {
+        font-size: 30px;
+        font-weight: 400;
+		color: var(--DarkBlue);
+        
+    }
+
+    p {
+        font-size: 20px;
+        color: var(--GrayishBlue);
+        line-height: 30px;
+    }
+
+</style>
