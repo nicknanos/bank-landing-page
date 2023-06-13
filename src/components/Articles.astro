@@ -1,0 +1,72 @@
+---
+const articles = await Astro.glob('../content/articles/*.md')
+---
+
+<section>
+{
+        articles.map((article)=>(
+            <article>
+                <img src={article.frontmatter.image} alt="image">
+                <div>
+                    <i>By {article.frontmatter.author}</i>
+                    <h4>{article.frontmatter.title}</h4>
+                    <p>{article.rawContent}</p>
+                </div>
+            </article>
+        ))
+    }
+</section>
+
+<style>
+
+    img {
+        width: 100%;
+        height: 50%;
+        object-fit:cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+    }
+
+
+    section {
+        display: flex;
+        gap: 10px;
+    }
+
+    div {
+        padding-top: 10px;
+    }
+
+    div > * {
+        padding: 0px 30px;
+    }
+
+    article {
+        flex: 1;
+        border-radius: 10px;
+        background-color: var(--White);
+    }
+
+    i {
+        font-size: 13px;
+        color: var(--GrayishBlue);
+    }
+
+    h4 {
+        font-size: 25px;
+        font-weight: 300;
+        color: var(--DarkBlue);
+        margin: 10px 0;
+    }
+
+    h4:hover {
+        cursor: pointer;
+        color: var(--LimeGreen);
+    }
+
+    p {
+        color: var(--GrayishBlue);
+    }
+
+</style>

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Features from '../components/Features.astro';
+import Articles from '../components/Articles.astro';
 ---
 
 <Layout title="Easy Bank">
@@ -15,6 +16,8 @@ import Features from '../components/Features.astro';
 				financial hub. <br> Control your finances like never before.
 			</p>
 			<Features/>
+			<h2>Latest Articles</h2>
+			<Articles/>
 		</div>
 	</main>
 </Layout>
@@ -32,7 +35,7 @@ import Features from '../components/Features.astro';
 		padding: 50px 200px;
 	}
 
-	.features > h2 {
+	h2 {
 		font-size: 45px;
 		font-weight: 300;
 		color: var(--DarkBlue);
