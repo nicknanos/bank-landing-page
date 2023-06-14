@@ -17,9 +17,9 @@ import Footer from '../components/Footer.astro';
 				financial hub. <br> Control your finances like never before.
 			</p>
 			<Features/>
-			<h2>Latest Articles</h2>
-			<Articles/>
 		</div>
+		<h2>Latest Articles</h2>
+		<Articles/>
 	</main>
 	<Footer/>
 </Layout>
@@ -32,15 +32,17 @@ import Footer from '../components/Footer.astro';
 	.features {
 		background-color: var(--LightGrayishBlue);
 		position: relative;
-		z-index: 40;
+		z-index: 1;
 		bottom: 100px;
-		padding: 50px 200px;
+		padding: 100px 200px;
 	}
 
 	h2 {
 		font-size: 45px;
 		font-weight: 300;
 		color: var(--DarkBlue);
+		width: 50%;
+		margin: 0px;
 	}
 
 	.features > p {
