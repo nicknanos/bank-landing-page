@@ -18,15 +18,17 @@ import Footer from '../components/Footer.astro';
 			</p>
 			<Features/>
 		</div>
-		<h2>Latest Articles</h2>
-		<Articles/>
+		<div class="articles">
+			<h2>Latest Articles</h2>
+			<Articles/>
+		</div>
 	</main>
 	<Footer/>
 </Layout>
 
 <style>
 	main {
-		background-color: var(--LightGrayishBlue);
+		background-color: var(--VeryLightGray);
 	}
 
 	.features {
@@ -34,7 +36,7 @@ import Footer from '../components/Footer.astro';
 		position: relative;
 		z-index: 1;
 		bottom: 100px;
-		padding: 100px 200px;
+		padding: 100px 200px 5px 200px;
 	}
 
 	h2 {
@@ -49,6 +51,11 @@ import Footer from '../components/Footer.astro';
 		font-size: 25px;
 		line-height: 30px;
         color: var(--GrayishBlue);
+	}
+
+	.articles {
+		margin-top: -30px;
+		padding: 0 200px 100px 200px;
 	}
 
 </style>
