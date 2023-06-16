@@ -27,6 +27,8 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <style>
+
+
 	main {
 		background-color: var(--VeryLightGray);
 	}
@@ -56,6 +58,24 @@ import Footer from '../components/Footer.astro';
 	.articles {
 		margin-top: -30px;
 		padding: 0 200px 100px 200px;
+	}
+
+
+	@media only screen and (max-width: 1200px) {
+		.features {
+			position: static;
+			padding: 80px 50px;
+			text-align: center;
+		}
+
+		h2 {
+			width: 100%;
+			font-size: 35px;
+		}
+
+		.articles {
+			padding: 50px;
+		}
 	}
 
 </style>

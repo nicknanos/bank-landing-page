@@ -37,6 +37,9 @@ import Button from "./Button.astro";
         background-color: var(--DarkBlue);
         padding: 70px 200px;
         display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
     }
 
     .left {
@@ -52,6 +55,7 @@ import Button from "./Button.astro";
     .sitemap {
         margin-left: 150px;
         display: flex;
+        flex-flow: row;
         gap: 100px;
     }
 
@@ -63,9 +67,6 @@ import Button from "./Button.astro";
         gap: 20px;
     }
 
-    .sitemap li {
-       
-    }
 
     .sitemap  a {
         text-decoration: none;
@@ -90,5 +91,27 @@ import Button from "./Button.astro";
         transform: scale(1.3,1.3);
     }
 
+
+	@media only screen and (max-width: 1200px) {
+        
+        section {
+            padding-inline: 100px;
+            flex-flow: column;
+            gap: 30px;
+        }
+
+
+        .sitemap {
+            margin: 0;
+            gap: 20px;
+            flex-flow: column;
+        }
+
+        .right {
+            text-align: center;
+            margin-left: 0;
+        }
+
+    }
 
 </style>

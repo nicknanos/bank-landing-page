@@ -1,6 +1,7 @@
 ---
 import NavLink from "./NavLink.astro";
 import Button from "./Button.astro";
+import MobileNav from "./MobileNav.astro";
 
 const links = [
 			{name:"Home", url:"#"},
@@ -19,7 +20,8 @@ const links = [
 			{links.map((link)=> <NavLink name={link.name} href={link.url}/>)}
 		</ul>
 	</nav>
-	<Button name="Request Invite"/>
+	<div><Button name="Request Invite"/></div>
+	<MobileNav />
 </header>
 
 <style>
@@ -47,6 +49,23 @@ const links = [
 		align-items: center;
 		justify-content: center;
 		gap: 25px;
+	}
+
+    @media only screen and (max-width: 1200px) {
+	
+		header {
+			position: static;
+			padding: 25px 20px;
+		}
+
+		ul {
+			display: none;
+		}
+
+		div {
+			display: none;
+		}
+
 	}
 
 </style>
